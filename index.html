@@ -11,6 +11,19 @@
 <body>
   <h1>My Book Library</h1>
 
+  <!-- Login Form -->
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button type="submit">Log In</button>
+  </form>
+
+  <!-- Profile Section -->
+  <div id="profile" style="display:none;">
+    <h2>Welcome, <span id="profile-username"></span>!</h2>
+    <button id="logout-button">Log Out</button>
+  </div>
+
   <form id="book-form">
     <input type="text" id="title" placeholder="Book Title" required />
     <input type="text" id="author" placeholder="Author" required />
