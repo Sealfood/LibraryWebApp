@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Book Organizer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <h1>My Book Library</h1>
+
+  <form id="book-form">
+    <input type="text" id="title" placeholder="Book Title" required />
+    <input type="text" id="author" placeholder="Author" required />
+    <select id="status">
+      <option value="unread">Unread</option>
+      <option value="read">Read</option>
+    </select>
+    <input type="url" id="cover" placeholder="Cover Image URL (optional)" />
+    <button type="submit">Add Book</button>
+  </form>
+
+  <div id="filters">
+    <input type="text" id="search" placeholder="Search by title or author..." />
+    <select id="filter-status">
+      <option value="all">All</option>
+      <option value="read">Read</option>
+      <option value="unread">Unread</option>
+    </select>
+  </div>
+
+  <div id="qr-reader" style="width:300px;"></div>
+  <button onclick="startScanner()">Start Scanner</button>
+  <button onclick="exportToCSV()">Export to CSV</button>
+  <input type="file" id="import-csv" accept=".csv" />
+  <ul id="book-list"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>

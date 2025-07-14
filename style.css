@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: auto;
+  padding: 1em;
+}
+form, #filters {
+  margin-bottom: 1em;
+}
+img {
+  margin-top: 0.5em;
+}
+button {
+  margin-right: 0.5em;
+}
